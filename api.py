@@ -14,8 +14,10 @@ from http.server import (
 )
 from typing import Any, Callable
 
-from scoring import get_score, get_interests
+from scoring.core import get_score, get_interests
+from store import Store
 
+store = Store()
 
 class Gender(Enum):
     UNKNOWN = 0
